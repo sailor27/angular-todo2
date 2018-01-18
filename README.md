@@ -22,6 +22,14 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Angular Tools and use
+| Angular Tool                         | Type                 | Implementation                                                                                                                                                                                                                           |
+|--------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *ngFor                               | structural directive | Loop through tasks array and print description                                                                                                                                                                                           |
+| (click)="editTask()"                 | event binding        | Run editTask() when button is clicked (one way)                                                                                                                                                                                          |
+| [class]= "priorityTask(currentTask)" | property binding     | Run priorityTask() to assign class to li elements based on their priority property                                                                                                                                                       |
+| $event.target.value                  | template statement   | retrieves content from the input field (event part of two way binding) note: not necessary when using ngModel                                                                                                                            |
+| [value]="name"                       | property binding     | sets HTML value property to the name variable (property part of two way binding)                                                                                                                                                         |
+| ngModel                              | directive            | [(ngModel)] is a property binding and event binding. It is on the text and radio fields, which edit the description and priority properties of the Task objects when the user changes the input                                          |
+| FormsModule                          | angular core code    | Piece of angular's core code that contains the ngModel directive. Imported module on app.module.ts and added to imports array                                                                                                            |
+| *ngIf                                | structural directive | ngIf directive determines whether or not an html element will be rendered based on if the statement is true or not null, or false or null.  *ngIf="selectedTask"  displays the div containing inputs only when there is a selected task. |

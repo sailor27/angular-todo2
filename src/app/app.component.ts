@@ -13,12 +13,13 @@ export class AppComponent {
 	day: number = this.currentTime.getDate();
 	year: number = this.currentTime.getFullYear();
 	tasks: Task[] = [
-		new Task("Finish weekend homework"),
-		new Task('Begin brainstorming possible JavaScript group projects'),
-		new Task('Add README file to last few Angular repos on GitHub')
+		new Task('Finish weekend homework', 2),
+		new Task('Begin brainstorming possible JavaScript group projects', 1),
+		new Task('Add README file to last few Angular repos on GitHub', 3)
 	];
-		editTask() {
-		alert("You just requested to edit a Task!");
+	selectedTask: Task = this.tasks[0];
+	editTask() {
+	alert("You just requested to edit a Task!");
 	}
 
 	isDone(clickedTask: Task){
@@ -28,9 +29,18 @@ export class AppComponent {
 			alert("this task is not done");
 		}
 	}
+	priorityTask(currentTask){
+		if (currentTask.priority === 3){
+			return "bg-danger";
+		} else if (currentTask.priority === 2){
+			return "bg-warning";
+		} else {
+			return "bg-info";
+		}
+	}
 }
 
 export class Task {
 	public done: boolean = false;
-	constructor(public description: string){ }
+	constructor(public description: string, public priority: number){ }
 }

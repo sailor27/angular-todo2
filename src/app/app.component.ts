@@ -21,6 +21,9 @@ export class AppComponent {
 	editTask(clickedTask) {
 		this.selectedTask = clickedTask;
 	}
+	finishedEditing(){
+		this.selectedTask = null;
+	}
 
 	isDone(clickedTask: Task){
 		if(clickedTask.done === true) {

@@ -1,0 +1,17 @@
+{
+  "name": "angular-todo2",
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.",
+  "main": "karma.conf.js",
+  "authors": [
+    "Sailor Winkelman"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sailor27/shapeplay",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

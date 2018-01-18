@@ -18,8 +18,8 @@ export class AppComponent {
 		new Task('Add README file to last few Angular repos on GitHub', 3)
 	];
 	selectedTask: Task = this.tasks[0];
-	editTask() {
-	alert("You just requested to edit a Task!");
+	editTask(clickedTask) {
+		this.selectedTask = clickedTask;
 	}
 
 	isDone(clickedTask: Task){
